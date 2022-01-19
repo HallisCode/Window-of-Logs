@@ -9,7 +9,7 @@ Method clear_text clears the entire log.
 ## How to install
 Just import my class and pass it the main window.
 ```
-from LogWindow.py import LogWindow
+from LogWindow import LogWindow
 main_window = tk.Tk()
 Log = LogWindow(main_window)
 ```
