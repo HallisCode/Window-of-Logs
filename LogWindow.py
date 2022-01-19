@@ -20,15 +20,15 @@ class LogWindow:
                                 height=self.height, yscrollcommand=scrollbar.set)
         self.textArea.pack(side=tk.TOP, fill=tk.X)
 
-        self.lines = 0
+        self._lines = 0
 
     def insert_text(self, text):
         time = datetime.now().time()
 
-        self.textArea.insert(f'{self.lines}.0', f'{time}: {text}\n')
+        self.textArea.insert(f'{self._lines}.0', f'{time}: {text}\n')
         self.textArea.see('end')
 
-        self.lines += 1
+        self._lines += 1
 
     def clear_text(self):
         self.textArea.delete('0.0', 'end')
